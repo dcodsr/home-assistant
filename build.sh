@@ -1,7 +1,7 @@
 #!/bin/bash
 
 HA_LATEST=false
-DOCKER_IMAGE_NAME="lroguet/rpi-home-assistant"
+DOCKER_IMAGE_NAME="dcodsr/home-assistant"
 RASPBIAN_RELEASE="stretch"
 
 log() {
@@ -64,6 +64,9 @@ RUN apt-get update && \
       bluetooth libbluetooth-dev \
       net-tools nmap \
       iputils-ping \
+      libxslt-dev \
+      libxml2-dev \
+      python3-lxml \
       ssh && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
